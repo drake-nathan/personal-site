@@ -1,0 +1,15 @@
+{
+  "extends": ["wesbos/typescript"],
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "@emotion/pkg-renaming": "error"
+  },
+  "plugins": ["@emotion"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
