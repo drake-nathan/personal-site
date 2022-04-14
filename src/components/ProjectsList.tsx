@@ -4,8 +4,13 @@ import { SubTitle } from './Header';
 import { projects } from '../data/project-data';
 
 const ProjectsContainer = styled.div`
-  margin-left: 20%;
-  width: 60%;
+  width: 60vw;
+  margin-left: 20vw;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
   h3 {
     font-weight: 500;
   }
