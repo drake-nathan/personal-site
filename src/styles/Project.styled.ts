@@ -23,9 +23,7 @@ export const StyledProjectLink = styled.a`
 `;
 
 export const StyledProjectDescription = styled.p`
-  font-size: 1.25rem;
   max-width: 95%;
-  color: var(--color-text);
   text-align: right;
 `;
 

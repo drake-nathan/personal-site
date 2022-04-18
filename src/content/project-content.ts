@@ -5,7 +5,7 @@ export const projects = [
     image: '/images/slackers.png',
     description: [
       `
-      This was a full-cohort group project meant to practice agile methodologies. I served as product manager on a team of 7 students. We had two weeks to build a full-stack clone of Slack from scratch and deploy it.`,
+      This was a full-cohort group project meant to practice agile methodologies. I served as product manager on a team of 7 students. We had two weeks to build a full-stack clone of Slack from scratch and deploy it. Feel free to login with the info below and check it out.`,
       `Tech Stack: React, Node, Express, PostgreSQL.`,
       `Login: aaron@example.com, pw: 'awesome'`,
     ],

@@ -6,7 +6,7 @@ export const StyledProjectsContainer = styled.div`
 
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 `;
 
 export const StyledProjectHr = styled.hr`
@@ -20,6 +20,6 @@ export const StyledProjectHr = styled.hr`
     100% 0,
     from(transparent),
     to(transparent),
-    color-stop(50%, black)
+    color-stop(50%, var(--color-text))
   );
 `;

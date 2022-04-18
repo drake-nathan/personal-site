@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import Project from './Project';
-import { projects } from '../data/project-data';
+import { projects } from '../content/project-content';
 
 import { StyledPageTitle } from '../styles/GlobalStyles';
 import {
