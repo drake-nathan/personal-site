@@ -1,22 +1,22 @@
-import styled from '@emotion/styled';
-
-const MainTitle = styled.h1`
-  font-size: 4.75rem;
-  font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 0px;
-`;
-
-export const SubTitle = styled.h3`
-  font-size: 2rem;
-  font-weight: 400;
-  margin-top: 20px;
-`;
+import Nav from './Nav';
+import {
+  StyledHeaderContainer,
+  StyledHeaderDiv,
+  StyledImg,
+  StyledMainTitle,
+  StyledHr,
+} from '../styles/Header.styled';
 
 const Header = () => (
   <>
-    <MainTitle>Nathan Drake</MainTitle>
-    <SubTitle>Software Engineer</SubTitle>
+    <StyledHeaderContainer>
+      <StyledHeaderDiv>
+        <StyledImg src="images/headshot.jpeg" />
+        <StyledMainTitle>Nathan Drake</StyledMainTitle>
+      </StyledHeaderDiv>
+      <Nav />
+    </StyledHeaderContainer>
+    <StyledHr />
   </>
 );
 

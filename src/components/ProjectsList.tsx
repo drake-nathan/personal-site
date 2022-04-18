@@ -1,28 +1,31 @@
-import styled from '@emotion/styled';
+import { Fragment } from 'react';
 import Project from './Project';
-import { SubTitle } from './Header';
 import { projects } from '../data/project-data';
 
-const ProjectsContainer = styled.div`
-  width: 60vw;
-  margin-left: 20vw;
-
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
-  h3 {
-    font-weight: 500;
-  }
-`;
+import { StyledPageTitle } from '../styles/GlobalStyles';
+import {
+  StyledProjectsContainer,
+  StyledProjectHr,
+} from '../styles/ProjectList.styled';
 
 const Projects = () => (
-  <ProjectsContainer>
-    <SubTitle>Projects</SubTitle>
-    {projects.map((project, i) => (
-      <Project key={i} project={project} />
-    ))}
-  </ProjectsContainer>
+  <>
+    <StyledPageTitle>Projects</StyledPageTitle>
+    <StyledProjectHr />
+    <StyledProjectsContainer>
+      {projects.map((project, i) => {
+        const isLastProject = i === projects.length - 1;
+        return (
+          <Fragment key={i}>
+            <Project index={i} {...project} />
+            {!isLastProject && (
+              <StyledProjectHr style={{ gridColumn: 'span 2' }} />
+            )}
+          </Fragment>
+        );
+      })}
+    </StyledProjectsContainer>
+  </>
 );
 
 export default Projects;

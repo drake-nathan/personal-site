@@ -1,3 +1,5 @@
-const Music = () => <h1>Music</h1>;
+import { StyledPageTitle } from '../styles/GlobalStyles';
+
+const Music = () => <StyledPageTitle>Music</StyledPageTitle>;
 
 export default Music;

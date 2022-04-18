@@ -6,7 +6,7 @@ const FooterContainer = styled.div`
   right: 0px;
   height: 50px;
   padding-top: 50px;
-  background-color: white;
+  background: var(--color-bg);
 
   hr {
     width: 80%;

@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 import Header from './components/Header';
-import Nav from './components/Nav';
 import Projects from './components/ProjectsList';
-import About from './components/About';
-import Hobbies from './components/Hobbies';
+import Home from './components/Home';
+import Interests from './components/Interests';
 import Music from './components/Music';
 import Footer from './components/Footer';
 
@@ -21,11 +20,10 @@ const App = () => (
   <AppContainer>
     <Router>
       <Header />
-      <Nav />
       <Routes>
-        <Route path="/" element={<About />} />
+        <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/hobbies" element={<Hobbies />} />
+        <Route path="/interests" element={<Interests />} />
         <Route path="/music" element={<Music />} />
       </Routes>
       <Footer />

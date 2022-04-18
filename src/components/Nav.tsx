@@ -1,35 +1,20 @@
-import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
-
-const NavContainer = styled.div`
-  font-size: 1.5rem;
-  font-weight: 400;
-
-  .link {
-    margin: auto 20px;
-  }
-
-  hr {
-    width: 80%;
-    margin-top: 36px;
-  }
-`;
+import CustomLink from './CustomLink';
+import { NavContainer } from '../styles/Nav.styled';
 
 const Nav = () => (
   <NavContainer>
-    <Link className="link" to="/">
-      About
-    </Link>
-    <Link className="link" to="/projects">
-      Projects
-    </Link>
-    <Link className="link" to="/hobbies">
-      Hobbies
-    </Link>
-    <Link className="link" to="/music">
-      Music
-    </Link>
-    <hr />
+    <CustomLink className="link" to="/">
+      01 Home
+    </CustomLink>
+    <CustomLink className="link" to="/projects">
+      02 Projects
+    </CustomLink>
+    <CustomLink className="link" to="/interests">
+      03 Interests
+    </CustomLink>
+    <CustomLink className="link" to="/music">
+      04 Music
+    </CustomLink>
   </NavContainer>
 );
 
