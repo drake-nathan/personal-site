@@ -1,12 +1,9 @@
 import { Fragment } from 'react';
 import Project from './Project';
-import { projects } from '../content/project-content';
+import { projects } from '../../content/project-content';
 
-import { StyledPageTitle } from '../styles/GlobalStyles';
-import {
-  StyledProjectsContainer,
-  StyledProjectHr,
-} from '../styles/ProjectList.styled';
+import { StyledPageTitle } from '../GlobalStyles';
+import { StyledProjectsContainer, StyledProjectHr } from './ProjectList.styled';
 
 const Projects = () => (
   <>

@@ -5,7 +5,7 @@ import {
   StyledImg,
   StyledMainTitle,
   StyledHr,
-} from '../styles/Header.styled';
+} from './Header.styled';
 
 const Header = () => (
   <>

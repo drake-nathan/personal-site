@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
 
-export const StyledProjectTextDiv = styled.div`
+type StyledProjectTextDivProps = { isOddIndex?: boolean };
+
+export const StyledProjectTextDiv = styled.div<StyledProjectTextDivProps>`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: ${(props) => (props.isOddIndex ? 'flex-start' : 'flex-end')};
 `;
 
 export const StyledProjectTitle = styled.h4`

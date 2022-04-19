@@ -1,6 +1,6 @@
-import { musicDescription } from '../content/music-content';
-import { StyledPageTitle } from '../styles/GlobalStyles';
-import { StyledMusicContainer, StyledMusicText } from '../styles/Music.styled';
+import { musicDescription } from '../../content/music-content';
+import { StyledPageTitle } from '../GlobalStyles';
+import { StyledMusicContainer, StyledMusicText } from './Music.styled';
 
 const Music = () => (
   <StyledMusicContainer>

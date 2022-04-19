@@ -1,5 +1,5 @@
 import CustomLink from './CustomLink';
-import { NavContainer } from '../styles/Nav.styled';
+import { NavContainer } from './Nav.styled';
 
 const Nav = () => (
   <NavContainer>

@@ -2,12 +2,12 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled from '@emotion/styled';
 
-import Header from './components/Header';
-import Projects from './components/ProjectsList';
-import Home from './components/Home';
-import Interests from './components/Interests';
-import Music from './components/Music';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Projects from './components/Projects/ProjectsList';
+import Home from './components/Home/Home';
+import Interests from './components/Interests/Interests';
+import Music from './components/Music/Music';
+import Footer from './components/Footer/Footer';
 
 const AppContainer = styled.div`
   p {

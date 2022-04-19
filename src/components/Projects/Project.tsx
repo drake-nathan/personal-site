@@ -4,7 +4,7 @@ import {
   StyledProjectImage,
   StyledProjectLink,
   StyledProjectTitle,
-} from '../styles/Project.styled';
+} from './Project.styled';
 
 interface Props {
   title: string;
@@ -19,9 +19,7 @@ const Project = ({ title, link, image, description, index }: Props) => {
   return (
     <>
       {isOddIndex && image && <StyledProjectImage src={image} />}
-      <StyledProjectTextDiv
-        style={{ alignItems: isOddIndex ? 'flex-start' : 'flex-end' }}
-      >
+      <StyledProjectTextDiv isOddIndex={isOddIndex}>
         {link ? (
           <StyledProjectLink
             href={link}

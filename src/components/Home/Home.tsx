@@ -1,4 +1,4 @@
-import { StyledPageTitle } from '../styles/GlobalStyles';
+import { StyledPageTitle } from '../GlobalStyles';
 
 const Home = () => <StyledPageTitle>Home</StyledPageTitle>;
 
