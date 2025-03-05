@@ -1,9 +1,11 @@
-import Image from "next/image";
+// TODO: Find new icons
+/* eslint-disable @typescript-eslint/no-deprecated */
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Twitter, FileText } from "lucide-react";
+import { FileText, Github, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-black p-4 text-white">
       <Card className="w-full max-w-md border-zinc-800 bg-zinc-900">
@@ -11,11 +13,11 @@ export default function Home() {
           {/* Profile Image */}
           <div className="border-primary relative h-32 w-32 overflow-hidden rounded-full border-2">
             <Image
-              src="/placeholder.svg?height=128&width=128"
               alt="Profile Picture"
-              fill
               className="object-cover"
+              fill
               priority
+              src="/placeholder.svg?height=128&width=128"
             />
           </div>
 
@@ -32,14 +34,14 @@ export default function Home() {
           {/* Social Links */}
           <div className="w-full space-y-3">
             <Button
-              variant="outline"
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
               asChild
+              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
+              variant="outline"
             >
               <a
                 href="https://github.com/yourusername"
-                target="_blank"
                 rel="noopener noreferrer"
+                target="_blank"
               >
                 <Github className="h-5 w-5" />
                 <span>GitHub</span>
@@ -47,14 +49,14 @@ export default function Home() {
             </Button>
 
             <Button
-              variant="outline"
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
               asChild
+              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
+              variant="outline"
             >
               <a
                 href="https://linkedin.com/in/yourusername"
-                target="_blank"
                 rel="noopener noreferrer"
+                target="_blank"
               >
                 <Linkedin className="h-5 w-5" />
                 <span>LinkedIn</span>
@@ -62,14 +64,14 @@ export default function Home() {
             </Button>
 
             <Button
-              variant="outline"
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
               asChild
+              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
+              variant="outline"
             >
               <a
                 href="https://twitter.com/yourusername"
-                target="_blank"
                 rel="noopener noreferrer"
+                target="_blank"
               >
                 <Twitter className="h-5 w-5" />
                 <span>Twitter</span>
@@ -77,11 +79,11 @@ export default function Home() {
             </Button>
 
             <Button
-              variant="outline"
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
               asChild
+              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
+              variant="outline"
             >
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/resume.pdf" rel="noopener noreferrer" target="_blank">
                 <FileText className="h-5 w-5" />
                 <span>Resume</span>
               </a>
@@ -95,4 +97,6 @@ export default function Home() {
       </footer>
     </main>
   );
-}
+};
+
+export default Home;
