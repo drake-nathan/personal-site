@@ -1,5 +1,7 @@
 import { prettierConfig } from "js-style-kit";
 
 export default prettierConfig({
-  tailwindPlugin: true,
+  tailwindPlugin: {
+    tailwindStylesheet: "./src/app/globals.css",
+  },
 });

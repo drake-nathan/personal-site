@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
 
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 
 import "./globals.css";
 
-const geistSans = Geist({
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
+  variable: "--font-roboto-mono",
 });
 
 export const metadata: Metadata = {
   description: "Frontend Developer specializing in React and Next.js",
-  title: "Your Name | Personal Site",
+  title: "Nathan Drake",
 };
 
 const RootLayout = ({
@@ -24,10 +19,8 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => (
-  <html lang="en">
-    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      {children}
-    </body>
+  <html className="dark" lang="en">
+    <body className={`${robotoMono.variable} antialiased`}>{children}</body>
   </html>
 );
 
