@@ -17,7 +17,7 @@ const Home = () => {
               className="object-cover"
               fill
               priority
-              src="/headshot.jpeg"
+              src="/Headshot.jpeg"
             />
           </div>
 
