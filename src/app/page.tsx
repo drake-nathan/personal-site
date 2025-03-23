@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-deprecated */
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { FileText, Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
 const Home = () => {
@@ -25,14 +25,28 @@ const Home = () => {
           <div className="space-y-2 text-center">
             <h1 className="text-2xl font-bold">Nathan Drake</h1>
             <p className="max-w-sm text-balance text-muted-foreground">
-              Frontend Developer specializing in React and Next.js. Passionate
-              about creating beautiful, user-friendly interfaces and solving
-              complex problems.
+              Frontend/vibe/whatever coder. I&apos;m good at building systems
+              that solve problems for good.
             </p>
           </div>
 
           {/* Social Links */}
           <div className="w-full space-y-3">
+            <Button
+              asChild
+              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
+              variant="outline"
+            >
+              <a
+                href="/nathan-drake-resume.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FileText className="h-5 w-5" />
+                <span>Resume</span>
+              </a>
+            </Button>
+
             <Button
               asChild
               className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
@@ -77,17 +91,6 @@ const Home = () => {
                 <span>Twitter</span>
               </a>
             </Button>
-
-            {/* <Button
-              asChild
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
-              variant="outline"
-            >
-              <a href="/resume.pdf" rel="noopener noreferrer" target="_blank">
-                <FileText className="h-5 w-5" />
-                <span>Resume</span>
-              </a>
-            </Button> */}
           </div>
         </div>
       </Card>
