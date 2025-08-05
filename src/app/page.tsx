@@ -18,7 +18,7 @@ const Home = () => {
               className="object-cover"
               fill
               priority
-              src="/Headshot.jpeg"
+              src="/Headshot.png"
             />
           </div>
 
@@ -26,8 +26,8 @@ const Home = () => {
           <div className="space-y-2 text-center">
             <h1 className="text-2xl font-bold">Nathan Drake</h1>
             <p className="max-w-sm text-balance text-muted-foreground">
-              Frontend/vibe/whatever coder. I&apos;m good at building systems
-              that solve problems for good.
+              Frontend/Product Engineer. I&apos;m good at building systems that
+              solve problems for good.
             </p>
           </div>
 
