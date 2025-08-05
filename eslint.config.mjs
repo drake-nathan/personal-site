@@ -1,6 +1,7 @@
+// @ts-check
 import { eslintConfig } from "js-style-kit";
 
 export default eslintConfig({
-  react: { next: true },
+  react: { framework: "next" },
   typescript: "tsconfig.eslint.json",
 });

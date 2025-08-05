@@ -1,9 +1,10 @@
 // TODO: Find new icons
 /* eslint-disable @typescript-eslint/no-deprecated */
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { FileText, Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
+
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 const Home = () => {
   return (
