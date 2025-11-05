@@ -1,16 +1,72 @@
 // TODO: Find new icons
 /* eslint-disable @typescript-eslint/no-deprecated */
-import { FileText, Github, Linkedin, Twitter } from "lucide-react";
+import {
+  Code,
+  CreditCard,
+  FileText,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+} from "lucide-react";
 import Image from "next/image";
 
+import { LinkCard } from "@/components/link-card";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 const Home = () => {
+  const links = [
+    {
+      href: "/nathan-drake-resume.pdf",
+      icon: FileText,
+      label: "Resume",
+    },
+    {
+      href: "mailto:nathan@nathandrake.dev",
+      icon: Mail,
+      label: "Email",
+    },
+    {
+      href: "https://github.com/drake-nathan",
+      icon: Github,
+      label: "GitHub",
+    },
+    {
+      href: "https://linkedin.com/in/drakenathan",
+      icon: Linkedin,
+      label: "LinkedIn",
+    },
+    {
+      href: "https://twitter.com/nathandrake",
+      icon: Twitter,
+      label: "Twitter",
+    },
+  ];
+
+  const projects = [
+    {
+      description: "A gold bar comparison site for credit card hackers",
+      href: "https://dashboard.gold",
+      icon: CreditCard,
+      label: "dashboard.gold",
+    },
+    {
+      description: "An open source ESLint/Prettier style guide",
+      href: "https://github.com/drake-nathan/js-style-kit",
+      icon: Code,
+      label: "js-style-kit",
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 font-mono">
-      <Card className="w-full max-w-md border-zinc-800 bg-zinc-900">
-        <div className="flex flex-col items-center space-y-6 p-6">
+    <LinkCard
+      footer={
+        <footer className="mt-8 text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Nathan Drake
+        </footer>
+      }
+      header={
+        <>
           {/* Profile Image */}
           <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-secondary">
             <Image
@@ -30,76 +86,43 @@ const Home = () => {
               solve problems for good.
             </p>
           </div>
-
-          {/* Social Links */}
-          <div className="w-full space-y-3">
-            <Button
-              asChild
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
-              variant="outline"
-            >
-              <a
-                href="/nathan-drake-resume.pdf"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <FileText className="h-5 w-5" />
-                <span>Resume</span>
-              </a>
-            </Button>
-
-            <Button
-              asChild
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
-              variant="outline"
-            >
-              <a
-                href="https://github.com/drake-nathan"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Github className="h-5 w-5" />
-                <span>GitHub</span>
-              </a>
-            </Button>
-
-            <Button
-              asChild
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
-              variant="outline"
-            >
-              <a
-                href="https://linkedin.com/in/drakenathan"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span>LinkedIn</span>
-              </a>
-            </Button>
-
-            <Button
-              asChild
-              className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
-              variant="outline"
-            >
-              <a
-                href="https://twitter.com/nathandrake"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Twitter className="h-5 w-5" />
-                <span>Twitter</span>
-              </a>
-            </Button>
+        </>
+      }
+      links={links}
+    >
+      {/* Projects Section */}
+      <div className="w-full space-y-3">
+        <div className="relative">
+          <div className="absolute inset-0 flex items-center">
+            <span className="w-full border-t border-zinc-700" />
+          </div>
+          <div className="relative flex justify-center text-xs uppercase">
+            <span className="bg-zinc-900 px-2 text-muted-foreground">
+              Projects
+            </span>
           </div>
         </div>
-      </Card>
 
-      <footer className="mt-8 text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Nathan Drake
-      </footer>
-    </main>
+        {projects.map((project) => (
+          <Button
+            asChild
+            className="w-full justify-start space-x-2 border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
+            key={project.href}
+            variant="outline"
+          >
+            <a
+              href={project.href}
+              rel="noopener noreferrer"
+              target="_blank"
+              title={project.description}
+            >
+              <project.icon className="h-5 w-5" />
+              <span>{project.label}</span>
+            </a>
+          </Button>
+        ))}
+      </div>
+    </LinkCard>
   );
 };
 
