@@ -81,10 +81,6 @@ const Home = () => {
           {/* Name and Bio */}
           <div className="space-y-2 text-center">
             <h1 className="text-2xl font-bold">Nathan Drake</h1>
-            <p className="max-w-sm text-balance text-muted-foreground">
-              Frontend/Product Engineer. I&apos;m good at building systems that
-              solve problems for good.
-            </p>
           </div>
         </>
       }
