@@ -6,6 +6,16 @@ import { LinkCard } from "@/components/link-card";
 const ConvexPage = () => {
   const links = [
     {
+      href: "https://github.com/drake-nathan/gold-dashboard-rr",
+      icon: Code,
+      label: "Demo Project - GitHub",
+    },
+    {
+      href: "https://dashboard.gold/",
+      icon: ExternalLink,
+      label: "Live Demo - dashboard.gold",
+    },
+    {
       href: "https://convex.dev/referral/NATHAN385",
       icon: ExternalLink,
       label: "Convex - Use my referral!",
