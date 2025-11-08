@@ -8,6 +8,7 @@ export interface LinkItem {
   href: string;
   icon: LucideIcon;
   label: string;
+  onClick?: () => void;
 }
 
 interface LinkCardProps {
@@ -39,7 +40,12 @@ export const LinkCard = ({
                 key={link.href}
                 variant="outline"
               >
-                <a href={link.href} rel="noopener noreferrer" target="_blank">
+                <a
+                  href={link.href}
+                  onClick={link.onClick}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <link.icon className="h-5 w-5" />
                   <span>{link.label}</span>
                 </a>

@@ -1,3 +1,5 @@
+"use client";
+
 // TODO: Find new icons
 /* eslint-disable @typescript-eslint/no-deprecated */
 import {
@@ -10,36 +12,65 @@ import {
   Twitter,
 } from "lucide-react";
 import Image from "next/image";
+import posthog from "posthog-js";
 
 import { LinkCard } from "@/components/link-card";
 import { Button } from "@/components/ui/button";
 
 const Home = () => {
+  const handleLinkClick = (eventName: string, properties?: object) => {
+    posthog.capture(eventName, properties);
+  };
+
   const links = [
     {
       href: "/nathan-drake-resume.pdf",
       icon: FileText,
       label: "Resume",
+      onClick: () =>
+        { handleLinkClick("resume_downloaded", {
+          link_type: "resume",
+        }); },
     },
     {
       href: "mailto:nathan@nathandrake.dev",
       icon: Mail,
       label: "Email",
+      onClick: () =>
+        { handleLinkClick("email_clicked", {
+          email: "nathan@nathandrake.dev",
+          link_type: "contact",
+        }); },
     },
     {
       href: "https://github.com/drake-nathan",
       icon: Github,
       label: "GitHub",
+      onClick: () =>
+        { handleLinkClick("github_profile_clicked", {
+          link_type: "social",
+          platform: "github",
+        }); },
     },
     {
       href: "https://linkedin.com/in/drakenathan",
       icon: Linkedin,
       label: "LinkedIn",
+      onClick: () =>
+        { handleLinkClick("linkedin_profile_clicked", {
+          link_type: "social",
+          platform: "linkedin",
+        }); },
     },
     {
       href: "https://twitter.com/nathandrake",
       icon: Twitter,
       label: "Twitter",
+      onClick: () =>
+        { handleLinkClick("twitter_profile_clicked", {
+          link_type: "social",
+          platform: "twitter",
+        }); },
     },
   ];
 
@@ -49,12 +80,22 @@ const Home = () => {
       href: "https://dashboard.gold",
       icon: CreditCard,
       label: "dashboard.gold",
+      onClick: () =>
+        { handleLinkClick("project_clicked", {
+          project_name: "dashboard.gold",
+          project_type: "live_site",
+        }); },
     },
     {
       description: "An open source ESLint/Prettier style guide",
       href: "https://github.com/drake-nathan/js-style-kit",
       icon: Code,
       label: "js-style-kit",
+      onClick: () =>
+        { handleLinkClick("project_clicked", {
+          project_name: "js-style-kit",
+          project_type: "github",
+        }); },
     },
   ];
 
@@ -108,6 +149,7 @@ const Home = () => {
           >
             <a
               href={project.href}
+              onClick={project.onClick}
               rel="noopener noreferrer"
               target="_blank"
               title={project.description}

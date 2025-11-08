@@ -1,0 +1,67 @@
+[
+  {
+    "description": "User clicked to view/download resume PDF",
+    "eventName": "resume_downloaded",
+    "filePath": "src/app/page.tsx"
+  },
+  {
+    "description": "User clicked email contact link",
+    "eventName": "email_clicked",
+    "filePath": "src/app/page.tsx"
+  },
+  {
+    "description": "User clicked to visit GitHub profile",
+    "eventName": "github_profile_clicked",
+    "filePath": "src/app/page.tsx"
+  },
+  {
+    "description": "User clicked to visit LinkedIn profile",
+    "eventName": "linkedin_profile_clicked",
+    "filePath": "src/app/page.tsx"
+  },
+  {
+    "description": "User clicked to visit Twitter profile",
+    "eventName": "twitter_profile_clicked",
+    "filePath": "src/app/page.tsx"
+  },
+  {
+    "description": "User clicked on a project link (dashboard.gold or js-style-kit)",
+    "eventName": "project_clicked",
+    "filePath": "src/app/page.tsx"
+  },
+  {
+    "description": "User clicked to view Convex demo project on GitHub",
+    "eventName": "convex_demo_project_clicked",
+    "filePath": "src/app/convex/page.tsx"
+  },
+  {
+    "description": "User clicked to view live Convex demo at dashboard.gold",
+    "eventName": "convex_live_demo_clicked",
+    "filePath": "src/app/convex/page.tsx"
+  },
+  {
+    "description": "User clicked the Convex referral link - HIGH VALUE conversion event",
+    "eventName": "convex_referral_clicked",
+    "filePath": "src/app/convex/page.tsx"
+  },
+  {
+    "description": "User clicked to view Convex documentation",
+    "eventName": "convex_docs_clicked",
+    "filePath": "src/app/convex/page.tsx"
+  },
+  {
+    "description": "User clicked to watch Theo's Convex video",
+    "eventName": "convex_video_clicked",
+    "filePath": "src/app/convex/page.tsx"
+  },
+  {
+    "description": "User navigated to the Convex talk page - top of conversion funnel for referral",
+    "eventName": "convex_page_viewed",
+    "filePath": "src/app/convex/page.tsx"
+  },
+  {
+    "description": "User clicked to navigate back to home from Convex page",
+    "eventName": "home_navigation_clicked",
+    "filePath": "src/app/convex/page.tsx"
+  }
+]
