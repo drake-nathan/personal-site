@@ -27,50 +27,55 @@ const Home = () => {
       href: "/nathan-drake-resume.pdf",
       icon: FileText,
       label: "Resume",
-      onClick: () =>
-        { handleLinkClick("resume_downloaded", {
+      onClick: () => {
+        handleLinkClick("resume_downloaded", {
           link_type: "resume",
-        }); },
+        });
+      },
     },
     {
       href: "mailto:nathan@nathandrake.dev",
       icon: Mail,
       label: "Email",
-      onClick: () =>
-        { handleLinkClick("email_clicked", {
+      onClick: () => {
+        handleLinkClick("email_clicked", {
           email: "nathan@nathandrake.dev",
           link_type: "contact",
-        }); },
+        });
+      },
     },
     {
       href: "https://github.com/drake-nathan",
       icon: Github,
       label: "GitHub",
-      onClick: () =>
-        { handleLinkClick("github_profile_clicked", {
+      onClick: () => {
+        handleLinkClick("github_profile_clicked", {
           link_type: "social",
           platform: "github",
-        }); },
+        });
+      },
     },
     {
       href: "https://linkedin.com/in/drakenathan",
       icon: Linkedin,
       label: "LinkedIn",
-      onClick: () =>
-        { handleLinkClick("linkedin_profile_clicked", {
+      onClick: () => {
+        handleLinkClick("linkedin_profile_clicked", {
           link_type: "social",
           platform: "linkedin",
-        }); },
+        });
+      },
     },
     {
       href: "https://twitter.com/nathandrake",
       icon: Twitter,
       label: "Twitter",
-      onClick: () =>
-        { handleLinkClick("twitter_profile_clicked", {
+      onClick: () => {
+        handleLinkClick("twitter_profile_clicked", {
           link_type: "social",
           platform: "twitter",
-        }); },
+        });
+      },
     },
   ];
 
@@ -80,22 +85,24 @@ const Home = () => {
       href: "https://dashboard.gold",
       icon: CreditCard,
       label: "dashboard.gold",
-      onClick: () =>
-        { handleLinkClick("project_clicked", {
+      onClick: () => {
+        handleLinkClick("project_clicked", {
           project_name: "dashboard.gold",
           project_type: "live_site",
-        }); },
+        });
+      },
     },
     {
       description: "An open source ESLint/Prettier style guide",
       href: "https://github.com/drake-nathan/js-style-kit",
       icon: Code,
       label: "js-style-kit",
-      onClick: () =>
-        { handleLinkClick("project_clicked", {
+      onClick: () => {
+        handleLinkClick("project_clicked", {
           project_name: "js-style-kit",
           project_type: "github",
-        }); },
+        });
+      },
     },
   ];
 
